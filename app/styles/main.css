@@ -7294,11 +7294,8 @@ td.visible-print {
 .fa-plus-square-o:before {
   content: "\f196";
 }
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.body {
+  background-color: #999;
 }
 .jumbotron {
   margin: 50px auto 0 auto;
@@ -7321,7 +7318,7 @@ td.visible-print {
   height: 100%;
   margin-left: -250px;
   overflow-y: auto;
-  background: #000;
+  background: #333;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -7359,7 +7356,7 @@ td.visible-print {
 }
 .sidebar-nav li a:hover {
   text-decoration: none;
-  color: #fff;
+  color: #999;
   background: rgba(255, 255, 255, 0.2);
 }
 .sidebar-nav li a:active,
@@ -7375,7 +7372,7 @@ td.visible-print {
   color: #999999;
 }
 .sidebar-nav > .sidebar-brand a:hover {
-  color: #fff;
+  color: #999;
   background: none;
 }
 @media (min-width: 768px) {
@@ -7400,3 +7397,4 @@ td.visible-print {
     margin-right: 0;
   }
 }
+/*# sourceMappingURL=/styles/main.css.map */
