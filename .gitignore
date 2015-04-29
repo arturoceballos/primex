@@ -50,3 +50,5 @@ crashlytics-build.properties
 
 /node_modules
 /bower_components
+
+/app/styles/main.css
