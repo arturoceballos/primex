@@ -10,30 +10,71 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+      <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
     <link rel="stylesheet" href="styles/main.css">
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
   <body>
-    <div class="container">
-      <div class="jumbotron">
-        <h1>'Allo, 'Allo!</h1>
-        <p>You now have</p>
-        <ul>
-          <li>HTML5 Boilerplate</li>
-          <li>Bootstrap</li>
-          <li>Font Awesome <i class="fa fa-flag"></i></li>
-        </ul>
-        <p>installed.</p>
-        <h3>Enjoy coding! - Yeoman</h3>
-      </div>
-    </div>
 
 
-    <!--[if lt IE 7]>
+    <!--[if lt IE 11]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                        Start Bootstrap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Dashboard</a>
+                </li>
+                <li>
+                    <a href="#">Shortcuts</a>
+                </li>
+                <li>
+                    <a href="#">Overview</a>
+                </li>
+                <li>
+                    <a href="#">Events</a>
+                </li>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <a href="#menu-toggle" class="fa fa-arrow-left fa-2x btn btn-default" id="menu-toggle"></a><h1>Simple Sidebar</h1>
+                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
+                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -48,8 +89,8 @@
 
         <!-- build:js scripts/main.js -->
         <script src="bower_components/jquery/jquery.js"></script>
-        <script src="scripts/main.js"></script>
-        <script src="scripts/hello.js"></script>
+        <!--<script src="scripts/main.js"></script>-->
+        <!--<script src="scripts/hello.js"></script>-->
         <!-- endbuild -->
 
         <!-- build:js scripts/vendor/bootstrap.js -->
@@ -66,5 +107,23 @@
         <script src="bower_components/bootstrap/js/collapse.js"></script>
         <script src="bower_components/bootstrap/js/tab.js"></script>
         <!-- endbuild -->
+
+
+    <!-- Menu Toggle Script -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+            if($("#wrapper").hasClass("toggled")){
+                $("#menu-toggle").removeClass("fa-arrow-left");
+                $("#wrapper").addClass("toggled");
+                $("#menu-toggle").addClass("fa-arrow-right");
+            }else{
+                $("#menu-toggle").hasClass("fa-arrow-right");
+                $("#menu-toggle").removeClass("fa-arrow-right");
+                $("#menu-toggle").addClass("fa-arrow-left");
+            }
+        });
+    </script>
 </body>
 </html>
